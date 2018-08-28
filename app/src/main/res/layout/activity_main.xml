@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/awan"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="327dp"
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/etNeme_room">
+    </ListView>
+
+    <EditText
+
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etNeme_room"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Masukkan Pesan" />
+        android:layout_toStartOf="@+id/btnAdd_room"
+        tools:ignore="RtlCompat" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Room"
+        android:id="@+id/btnAdd_room"
+        android:layout_gravity="right"
+        style="?android:attr/borderlessButtonStyle"
+        android:drawableLeft="@drawable/aww"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        app:srcCompat="@drawable/send" />
+        tools:ignore="RtlCompat" />
 </RelativeLayout>
